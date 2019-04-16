@@ -2,11 +2,23 @@
 title: My Blog
 layout: layout.html
 ---
+<!DOCTYPE html>
+<html lang="en">
 
-{{ page.title }}
-demo - 1
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ page.title }}</title>
+</head>
+
+<body>
+
 {% for post in site.posts %}
 
 {{ post.date|date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
 
 {% endfor %}
+</body>
+
+</html>
